@@ -1,0 +1,29 @@
+.page-404--content {
+	padding-block: calc(var(--padding) * 15);
+	position: relative;
+	text-align: center;
+	@include mobile {
+		padding-block: calc(var(--padding) * 7);
+	}
+
+	> * {
+		position: relative;
+		z-index: 2;
+	}
+
+	&--gif {
+		position: absolute;
+		top: 0;
+		left: 0;
+		width: 100%;
+		height: 100%;
+		object-fit: cover;
+		z-index: 0;
+	}
+
+	&--content {
+		display: flex;
+		flex-direction: column;
+		gap: calc(var(--padding) * 1.5);
+	}
+}

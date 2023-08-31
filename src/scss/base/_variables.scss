@@ -1,0 +1,70 @@
+// Breakpoints + mixins
+$mobile: 600px;
+$tablet-p: 850px;
+$tablet-l: 1200px;
+
+@mixin mobile {
+	@media (max-width: $mobile) {
+		@content;
+	}
+}
+
+@mixin inbetween-tablet-and-desktop {
+	@media (min-width: 1201px) and (max-width: 1600px) {
+		@content;
+	}
+}
+
+@mixin tablet-p {
+	@media (max-width: $tablet-p) {
+		@content;
+	}
+}
+
+@mixin tablet-l {
+	@media (max-width: $tablet-l) {
+		@content;
+	}
+}
+
+@mixin hover {
+	@media (hover: hover) {
+		@content;
+	}
+}
+
+:root {
+	--colour-white: #fff;
+	--colour-black: #000;
+
+	// Colours â€¢ Greys
+	--colour-grey-light: var(--owp-search-color-gray-2);
+	--colour-grey-medium: var(--owp-search-color-gray-3);
+	--colour-grey: var(--owp-search-color-gray);
+
+	// font
+	--font-body : var(--owp-search-font-size);
+	--font-body : var(--owp-search-font-family);
+	--font-primary: var(--font-body);
+
+	// Spacing / Layout
+	--padding: var(--owp-search-inline-gap);
+	--header-height: 100px;
+	--border-radius: var(--owp-search-radius);
+
+	@include mobile {
+		--header-height: 56px;
+	}
+
+	//// SVGs to use as backgrounds
+	//--svg-chain: url("data:image/svg+xml,%3Csvg width='20' height='10' viewBox='0 0 20 10' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M15 0H11V2H15C16.65 2 18 3.35 18 5C18 6.65 16.65 8 15 8H11V10H15C17.76 10 20 7.76 20 5C20 2.24 17.76 0 15 0ZM9 8H5C3.35 8 2 6.65 2 5C2 3.35 3.35 2 5 2H9V0H5C2.24 0 0 2.24 0 5C0 7.76 2.24 10 5 10H9V8ZM6 4H14V6H6V4Z' fill='%230A2CCA'/%3E%3C/svg%3E%0A");
+	//--svg-white-arrow: url("data:image/svg+xml,%3Csvg width='24' height='25' viewBox='0 0 24 25' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cg clip-path='url(%23clip0_1705_32463)'%3E%3Cpath d='M20.1756 10.1767L14.7805 5.2289L9.38063 0.300661C9.27699 0.206633 9.15346 0.132529 9.01744 0.0827908C8.88189 0.03061 8.73654 0.00250362 8.58929 0L0.755265 0C0.65588 -4.56516e-07 0.557472 0.0177666 0.465682 0.0522827C0.373893 0.0867988 0.290526 0.137385 0.220362 0.201142C0.150198 0.264899 0.0946165 0.340572 0.0568028 0.423824C0.0189891 0.507077 -0.000312682 0.59627 3.83043e-06 0.686292L3.83043e-06 20.7979C-0.000312682 20.888 0.0189891 20.9771 0.0568028 21.0604C0.0946165 21.1437 0.150198 21.2193 0.220362 21.2831C0.290526 21.3468 0.373893 21.3974 0.465682 21.4319C0.557472 21.4665 0.65588 21.4842 0.755265 21.4842H8.51232C8.68486 21.4835 8.8556 21.4525 9.01503 21.3927C9.17444 21.3326 9.31913 21.2445 9.44077 21.1334L14.8094 16.2205L20.1756 11.3075C20.3405 11.1573 20.4331 10.954 20.4331 10.7421C20.4331 10.5302 20.3405 10.327 20.1756 10.1767Z' fill='white'/%3E%3Cpath d='M23.7813 13.4798L20.2215 10.2227C20.3669 10.376 20.4429 10.5735 20.4345 10.7755C20.426 10.9774 20.3336 11.1691 20.1758 11.312L14.8096 16.2206L9.44096 21.1336C9.31954 21.2454 9.17483 21.3343 9.01522 21.3951C8.85579 21.4548 8.68505 21.4859 8.51252 21.4866H0.755455C0.563472 21.4851 0.379341 21.4173 0.240723 21.297L1.92443 22.8461L3.64421 24.4213C3.74029 24.5144 3.85657 24.5886 3.98576 24.6392C4.11375 24.6877 4.25108 24.7129 4.38985 24.7132H12.0868C12.2386 24.7141 12.3889 24.6869 12.5287 24.6334C12.6685 24.5798 12.7948 24.5009 12.8998 24.4017L18.3405 19.4233L23.7813 14.4428C23.9214 14.3147 24 14.1417 24 13.9613C24 13.781 23.9214 13.6079 23.7813 13.4798Z' fill='%230A2CCA'/%3E%3C/g%3E%3Cdefs%3E%3CclipPath id='clip0_1705_32463'%3E%3Crect width='24' height='25' fill='white'/%3E%3C/clipPath%3E%3C/defs%3E%3C/svg%3E%0A");
+	//--svg-orange-arrow: url("data:image/svg+xml,%3Csvg width='100' height='115' viewBox='0 0 20 23' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M16.7868 9.34801L12.2979 4.80309L7.80502 0.276178C7.71879 0.189807 7.61601 0.121737 7.50283 0.0760489C7.39005 0.0281173 7.26912 0.00229974 7.1466 0L0.628407 0C0.545716 -4.1934e-07 0.463837 0.0163198 0.387464 0.0480252C0.311092 0.0797305 0.241728 0.126197 0.183349 0.184762C0.124971 0.243327 0.0787243 0.312838 0.047262 0.389311C0.0157996 0.465784 -0.000260163 0.547714 3.18705e-06 0.630406V19.1043C-0.000260163 19.187 0.0157996 19.2689 0.047262 19.3454C0.0787243 19.4219 0.124971 19.4914 0.183349 19.5499C0.241728 19.6085 0.311092 19.655 0.387464 19.6867C0.463837 19.7184 0.545716 19.7347 0.628407 19.7347H7.08256C7.22611 19.7341 7.36818 19.7055 7.50083 19.6506C7.63346 19.5954 7.75385 19.5145 7.85506 19.4125L12.3219 14.8996L16.7868 10.3867C16.924 10.2487 17.0011 10.062 17.0011 9.86735C17.0011 9.67272 16.924 9.48601 16.7868 9.34801V9.34801Z' fill='%23FF6400'/%3E%3Cpath d='M19.7868 12.382L16.8248 9.39012C16.9458 9.53099 17.0091 9.71235 17.0021 9.8979C16.995 10.0834 16.9181 10.2595 16.7868 10.3908L12.3219 14.8997L7.85507 19.4126C7.75405 19.5153 7.63365 19.5969 7.50085 19.6527C7.36819 19.7076 7.22613 19.7362 7.08258 19.7368H0.628425C0.468688 19.7355 0.315485 19.6732 0.20015 19.5627L1.60105 20.9856L3.03197 22.4325C3.11191 22.5181 3.20866 22.5862 3.31615 22.6326C3.42265 22.6772 3.53691 22.7004 3.65237 22.7007H10.0565C10.1828 22.7015 10.3079 22.6765 10.4242 22.6273C10.5405 22.5781 10.6456 22.5057 10.7329 22.4145L15.2598 17.8416L19.7868 13.2666C19.9033 13.1489 19.9688 12.99 19.9688 12.8243C19.9688 12.6587 19.9033 12.4997 19.7868 12.382V12.382Z' fill='%230A2CCA'/%3E%3C/svg%3E%0A");;
+	//--svg-chevron: url("data:image/svg+xml,%3Csvg width='8' height='12' viewBox='0 0 8 12' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M2.00009 0L0.590088 1.41L5.17009 6L0.590088 10.59L2.00009 12L8.00009 6L2.00009 0Z' style='fill:%23D1D5D6;'/%3E%3C/svg%3E%0A");
+	//--svg-chevron-down: url("data:image/svg+xml,%3Csvg width='16' height='10' viewBox='0 0 16 10' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M2.49122 0.907989L7.99922 6.40399L13.5072 0.907989L15.1992 2.59999L7.99922 9.79999L0.799218 2.59999L2.49122 0.907989Z' style='fill:var(--icon-colour, %239BA2A6);'/%3E%3C/svg%3E");
+	//--svg-chevron-down-blue: url("data:image/svg+xml,%3Csvg width='16' height='10' viewBox='0 0 16 10' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M2.49122 0.907989L7.99922 6.40399L13.5072 0.907989L15.1992 2.59999L7.99922 9.79999L0.799218 2.59999L2.49122 0.907989Z' style='fill:var(--icon-colour, %230A2CCA);'/%3E%3C/svg%3E");
+	//--svg-chevron-left: url("data:image/svg+xml,%3Csvg width='8' height='12' viewBox='0 0 8 12' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M7.41 1.41L6 0L0 6L6 12L7.41 10.59L2.83 6L7.41 1.41Z' style='fill:var(--icon-colour, %230A2CCA);'/%3E%3C/svg%3E");
+	//--svg-chevron-right: url("data:image/svg+xml,%3Csvg width='8' height='12' viewBox='0 0 8 12' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M2.00009 0L0.590088 1.41L5.17009 6L0.590088 10.59L2.00009 12L8.00009 6L2.00009 0Z' style='fill:var(--icon-colour, %230A2CCA);'/%3E%3C/svg%3E%0A");
+	//--svg-white-corner: url("data:image/svg+xml,%3Csvg width='238' height='196' viewBox='0 0 238 196' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M0 0V196H34.713C39.0447 195.982 43.3314 195.178 47.3341 193.632C51.3363 192.076 54.969 189.795 58.0228 186.922L229.246 25.5C229.246 25.5 235.292 20.5 236.625 16.5C237.958 12.5 238 7.73934 238 7C238 6.5 238 0 238 0H0Z' fill='white'/%3E%3C/svg%3E%0A");
+	//--svg-hamburger: url("data:image/svg+xml,%3Csvg width='24' height='24' viewBox='0 0 24 24' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cg clip-path='url(%23clip0_683_1247)'%3E%3Cpath d='M3 18H21V16H3V18ZM3 13H21V11H3V13ZM3 6V8H21V6H3Z' fill='%230A2CCA'/%3E%3C/g%3E%3Cdefs%3E%3CclipPath id='clip0_683_1247'%3E%3Crect width='24' height='24' fill='white'/%3E%3C/clipPath%3E%3C/defs%3E%3C/svg%3E%0A");
+}

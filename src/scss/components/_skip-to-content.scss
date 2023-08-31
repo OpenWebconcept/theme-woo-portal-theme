@@ -1,0 +1,21 @@
+// | -------------------------------------------------------------
+// | skip-links component
+// | -------------------------------------------------------------
+
+#skip-to-content {
+  color: var(--colour-white);
+  background-color: var(--colour-black);
+  border-bottom-right-radius: 6px;
+  padding: 1rem 3.25rem;
+  position: absolute;
+  display: block;
+  z-index: 10;
+  top: -100vh;
+  left: 0;
+}
+
+#skip-to-content a:hover,
+#skip-to-content a:focus {
+  top: 0;
+  outline-offset: 2px;
+}

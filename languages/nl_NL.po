@@ -1,0 +1,122 @@
+msgid ""
+msgstr ""
+"Project-Id-Version: \n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2023-07-27T08:24:19+00:00\n"
+"PO-Revision-Date: 2023-07-27 10:28+0200\n"
+"Last-Translator: \n"
+"Language-Team: \n"
+"Language: nl_NL\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"X-Generator: Poedit 3.3.2\n"
+"X-Domain: woo-portal-theme\n"
+
+#: 404.php:18
+msgid "Page not found"
+msgstr "Pagina niet gevonden"
+
+#: 404.php:25
+msgid "Back to home"
+msgstr "Terug naar Home"
+
+#: footer.php:26 header.php:41
+msgid "Open"
+msgstr ""
+
+#: footer.php:36
+msgid "Have a question  about"
+msgstr "Heb je een vraag over een document of over"
+
+#: footer.php:39
+msgid "Please contact"
+msgstr "Neem contact op met"
+
+#: footer.php:47
+msgid "Looking for provincial of country specific documents?"
+msgstr "Op zoek naar provinciale of landelijke documenten?"
+
+#: footer.php:50
+#, fuzzy
+#| msgid "Continue your search on Woogle"
+msgid "Continue your search on WOOgle"
+msgstr "Zoek verder op WOOgle"
+
+#. translators: disclaimer.
+#: footer.php:62
+msgid ""
+"This website is part of municipal %s, in support of the Wet Open Overheid."
+msgstr ""
+"Deze website is onderdeel van Gemeente %s, ter ondersteuning van de Wet Open "
+"Overheid."
+
+#: header.php:35
+msgid "Skip directly to content"
+msgstr "Direct naar de content"
+
+#: header.php:45
+msgid "Contact"
+msgstr ""
+
+#: inc/cmb2/cmb2-theme-options.php:23
+msgid "Theme Options"
+msgstr "Thema Opties"
+
+#: inc/cmb2/cmb2-theme-options.php:37
+msgid "Header"
+msgstr ""
+
+#: inc/cmb2/cmb2-theme-options.php:38
+msgid "Set site name and contact-page"
+msgstr "Stel site naam en contact pagina in"
+
+#: inc/cmb2/cmb2-theme-options.php:45
+msgid "Site name"
+msgstr "Site naam"
+
+#: inc/cmb2/cmb2-theme-options.php:46
+msgid "Name of this site"
+msgstr "Site naam"
+
+#: inc/cmb2/cmb2-theme-options.php:76
+msgid "Contact page"
+msgstr "Contact pagina"
+
+#: inc/cmb2/cmb2-theme-options.php:77
+msgid "Contact page url"
+msgstr "Selecteer de contactpagina"
+
+#: inc/cmb2/cmb2-theme-options.php:87
+msgid "Footer"
+msgstr ""
+
+#: inc/cmb2/cmb2-theme-options.php:88
+msgid "Set logo image and contact email address"
+msgstr "Stel logo afbeelding en contact email adres in"
+
+#: inc/cmb2/cmb2-theme-options.php:95
+#, fuzzy
+#| msgid "footer logo image"
+msgid "Footer logo image"
+msgstr "Footer logo afbeelding"
+
+#: inc/cmb2/cmb2-theme-options.php:96
+msgid "Logo"
+msgstr ""
+
+#: inc/cmb2/cmb2-theme-options.php:114
+msgid "Footer column 2 contact email address"
+msgstr "Footer kolom 2 contact email adres"
+
+#: inc/cmb2/cmb2-theme-options.php:115
+msgid "Contact email address"
+msgstr "Contact email adres"
+
+#: search.php:29
+msgid "Your search"
+msgstr "Je hebt gezocht op"
+
+#: search.php:64
+msgid "No search results for"
+msgstr "Er zijn geen zoekresultaten gevonden voor"

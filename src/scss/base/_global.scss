@@ -1,0 +1,58 @@
+*, *:before, *:after {
+	box-sizing: border-box;
+}
+
+* {
+	margin: 0;
+	outline-offset: 3px;
+}
+
+html {
+	scroll-padding-top: calc(var(--padding) * 4);
+	scroll-behavior: smooth;
+}
+
+body {
+	font-size: var( --font-size );
+	font-family: var( --font-body );
+	line-height: 1.75;
+	-webkit-font-smoothing: antialiased;
+	color: var( --owp-color );
+
+	&.menu-open {
+		@include tablet-l {
+			overflow: hidden;
+		}
+	}
+}
+
+img, picture, video, canvas, svg {
+	display: block;
+	max-width: 100%;
+}
+
+input, button, textarea, select {
+	font: inherit;
+}
+
+[hidden] {
+	display: none;
+}
+
+::selection {
+	background: var(--colour-black);
+	color: white;
+	text-shadow: none;
+}
+
+.container {
+	width: 100%;
+	max-width: var(--max-container-width);
+	margin-inline: auto;
+	width: min(#{calc(100% - (var(--owp-search-inline-gap) * 2))}, var(--owp-search-container-width));
+	margin-inline: auto;
+}
+
+figure {
+	margin: 0;
+}

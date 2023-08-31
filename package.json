@@ -1,0 +1,33 @@
+{
+  "name": "woo-portal-theme",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "development": "mix",
+    "watch": "mix watch",
+    "start": "mix watch",
+    "production": "mix --production",
+    "build": "mix --production"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+ssh://git@bitbucket.org/acato/woo-portal-theme.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "homepage": "https://bitbucket.org/acato/woo-portal-theme#readme",
+  "devDependencies": {
+    "copy-webpack-plugin": "^11.0.0",
+    "cross-env": "^7.0.3",
+    "laravel-mix": "^6.0.49",
+    "resolve-url-loader": "^5.0.0",
+    "sass": "^1.54.9",
+    "sass-loader": "^12.6.0",
+    "webpack-cli": "^4.10.0"
+  },
+  "dependencies": {
+    "autoprefixer": "10.4.5"
+  }
+}

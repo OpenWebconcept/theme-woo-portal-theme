@@ -1,0 +1,44 @@
+.header {
+	overflow: hidden;
+	padding: var(--padding) 0px;
+	.container {
+		display: flex;
+		justify-content: space-between;
+		align-items: center;
+	}
+}
+
+.header a {
+	float: left;
+	color: var(--colour-black);
+	text-align: center;
+	padding: 12px 0;
+	text-decoration: none;
+	font-weight: 700;
+	font-size: 1rem;
+	line-height: 25px;
+	border-radius: 4px;
+	&.logo {
+		font-size: 22px;
+		font-weight: bold;
+	}
+}
+
+.header a:not(.logo):hover {
+	text-decoration: underline;
+}
+
+.header-right {
+	float: right;
+}
+
+@media screen and (max-width: 500px) {
+	.header a {
+		float: none;
+		display: block;
+		text-align: left;
+	}
+	.header-right {
+		float: none;
+	}
+}
