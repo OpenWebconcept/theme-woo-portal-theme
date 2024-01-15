@@ -11,7 +11,7 @@ namespace Acato\WOO_Portal_Theme;
 
 use Acato\WOO_Portal_Theme\Tools;
 
-$sitename = 'openwebconcept' === strtolower( get_bloginfo( 'name' ) ) ? '' : esc_html__( 'Open', 'woo-portal-theme' ) . esc_html( get_bloginfo( 'name' ) );
+$site_title = get_bloginfo('name');
 ?>
 
 </main>
@@ -25,7 +25,7 @@ $sitename = 'openwebconcept' === strtolower( get_bloginfo( 'name' ) ) ? '' : esc
 			if ( ! empty( $image ) ) {
 				echo wp_kses_post( $image );
 			} else {
-				echo '<div>' . $sitename . '</div>';
+				echo '<div>' . esc_html( $site_title ) . '</div>';
 			}
 			?>
 			</a>

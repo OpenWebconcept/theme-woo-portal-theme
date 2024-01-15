@@ -23,4 +23,5 @@ mix.setPublicPath( 'dist' )
 	// Fixes mainly @font-face URLs. Will generate non-relative URLs when true.
 	processCssUrls: false,
 	autoprefixer: { remove: false },
+	cssnano: { preset: "default" },
 } );

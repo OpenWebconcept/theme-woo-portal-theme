@@ -7,16 +7,12 @@
  * @author     Acato
  */
 
-$site_title = ('openwebconcept' === strtolower(get_bloginfo('name')) ? '' : esc_html__('Open', 'woo-portal-theme')) . esc_html(get_bloginfo('name'));
-if ( empty( $site_title ) ) {
-    $site_title = $_SERVER['HTTP_HOST'];
-}
-
+$site_title = get_bloginfo('name');
 ?>
 <!DOCTYPE html>
 <html <?php language_attributes(); ?>>
 <head>
-    <title><?php echo esc_html($site_title) ?></title>
+    <title><?php echo esc_html( $site_title ) ?></title>
     <meta charset="UTF-8">
 	<meta
 		name="viewport"
