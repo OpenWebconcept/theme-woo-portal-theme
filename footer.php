@@ -31,28 +31,30 @@ $site_title = get_bloginfo('name');
 			</a>
 		</div>
 		<div class="nav__item">
+            <div class="nav__content">
 		<?php
-		$email = cmb2_get_option( 'woo_portal_theme_options', 'woo_portal_theme_email' );
-		if ( ! empty( $email ) ) {
-			?>
-			<div class="nav__title"><?php echo esc_html__( 'Have a question  about', 'woo-portal-theme' ) . ' ' . esc_html( get_bloginfo( 'name' ) ); ?>?</div>
-			<div class="nav__content">
-			<?php
-			echo esc_html__( 'Please contact', 'woo-portal-theme' );
-			?>
-			<span><a href="mailto:<?php echo esc_attr( $email ); ?>"> <?php echo esc_html( $email ); ?></a>
-			</div>
-			<?php } ?>
+            $text2 = cmb2_get_option( 'woo_portal_theme_options', 'woo_portal_theme_col_2_text' );
+            if ( ! empty( $text2 ) ) {
+                echo wp_kses_post( $text2 );
+            }?>
+		    </div>
 		</div>
-
-		<div class="nav__item">
-			<div class="nav__title"><?php echo esc_html__( 'Looking for provincial of country specific documents?', 'woo-portal-theme' ); ?></div>
-			<div class="nav__content"><a class="footer__btn" href="https://woogle.nl" target="_blank">
-			<?php
-			echo esc_html__( 'Continue your search on WOOgle', 'woo-portal-theme' );
-			Tools::svg( 'external-link' );
-			?>
-			</a></div>
+        <div class="nav__item">
+            <div class="nav__content">
+        <?php
+            $text3      = cmb2_get_option( 'woo_portal_theme_options', 'woo_portal_theme_col_3_text' );
+            $btn_text   = cmb2_get_option( 'woo_portal_theme_options', 'woo_portal_theme_col_3_woogle_button_text' );
+            $btn_url    = cmb2_get_option( 'woo_portal_theme_options', 'woo_portal_theme_col_3_woogle_button_url' );
+            if ( ! empty( $text3 ) ) {
+                echo wp_kses_post( $text3 );
+            } ?>
+			    <a class="footer__btn" href="<?php echo esc_url( $btn_url ) ?>" target="_blank">
+                <?php
+                echo esc_html( $btn_text );
+                Tools::svg( 'external-link' );
+                ?>
+                </a>
+            </div>
 		</div>
 	</div>
 

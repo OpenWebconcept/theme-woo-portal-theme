@@ -103,10 +103,34 @@ function woo_portal_theme_register_theme_options_metabox() {
 	);
 	$cmb_options->add_field(
 		array(
-			'name' => esc_html__( 'Footer column 2 contact email address', 'woo-portal-theme' ),
-			'desc' => esc_html__( 'Contact email address', 'woo-portal-theme' ),
-			'id'   => 'woo_portal_theme_email',
-			'type' => 'text_email',
+			'name' => esc_html__( 'Footer column 2 text', 'woo-portal-theme' ),
+			'desc' => esc_html__( 'text contact email address', 'woo-portal-theme' ),
+			'id'   => 'woo_portal_theme_col_2_text',
+			'type' => 'wysiwyg',
+		)
+	);
+	$cmb_options->add_field(
+		array(
+			'name' => esc_html__( 'Footer column 3 text', 'woo-portal-theme' ),
+			'desc' => esc_html__( 'text contact email address', 'woo-portal-theme' ),
+			'id'   => 'woo_portal_theme_col_3_text',
+			'type' => 'wysiwyg',
+		)
+	);
+	$cmb_options->add_field(
+		array(
+			'name' => esc_html__( 'Footer column 3 Woogle button text', 'woo-portal-theme' ),
+			'desc' => esc_html__( 'Woogle button', 'woo-portal-theme' ),
+			'id'   => 'woo_portal_theme_col_3_woogle_button_text',
+			'type' => 'text_medium',
+		)
+	);
+	$cmb_options->add_field(
+		array(
+			'name' => esc_html__( 'Footer column 3 Woogle button url', 'woo-portal-theme' ),
+			'desc' => esc_html__( 'Woogle button', 'woo-portal-theme' ),
+			'id'   => 'woo_portal_theme_col_3_woogle_button_url',
+			'type' => 'text_url',
 		)
 	);
 }
