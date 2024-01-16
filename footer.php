@@ -35,7 +35,7 @@ $site_title = get_bloginfo('name');
 		$email = cmb2_get_option( 'woo_portal_theme_options', 'woo_portal_theme_email' );
 		if ( ! empty( $email ) ) {
 			?>
-			<div class="nav__title"><?php echo esc_html__( 'Have a question  about', 'woo-portal-theme' ) . ' ' . ( 'openwebconcept' === strtolower( get_bloginfo( 'name' ) ) ? '' : esc_html__( 'Open', 'woo-portal-theme' ) ) . esc_html( get_bloginfo( 'name' ) ); ?>?</div>
+			<div class="nav__title"><?php echo esc_html__( 'Have a question  about', 'woo-portal-theme' ) . ' ' . esc_html( get_bloginfo( 'name' ) ); ?>?</div>
 			<div class="nav__content">
 			<?php
 			echo esc_html__( 'Please contact', 'woo-portal-theme' );

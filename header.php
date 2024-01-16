@@ -36,7 +36,7 @@ do_action( 'wp_body_open' );
 <div class="header">
 	<div class="container">
 		<a class="logo" href="<?php echo esc_url( get_bloginfo( 'url' ) ); ?>" title="<?php echo esc_html( get_bloginfo( 'description' ) ); ?>">
-		<div class="header__title"><?php echo ( 'openwebconcept' === strtolower( get_bloginfo( 'name' ) ) ? '' : esc_html__( 'Open', 'woo-portal-theme' ) ) . esc_html( get_bloginfo( 'name' ) ); ?></div>
+		<div class="header__title"><?php echo esc_html( get_bloginfo( 'name' ) ); ?></div>
 		</a>
 		<div class="header-right">
 			<?php
