@@ -133,4 +133,20 @@ function woo_portal_theme_register_theme_options_metabox() {
 			'type' => 'text_url',
 		)
 	);
+	$cmb_options->add_field(
+		array(
+			'name' => esc_html__( 'Legal', 'woo-portal-theme' ),
+			'desc' => esc_html__( 'Set disclaimer text', 'woo-portal-theme' ),
+			'id'   => 'woo_portal_theme_legal',
+			'type' => 'title',
+		)
+	);
+	$cmb_options->add_field(
+		array(
+			'name' => esc_html__( 'Legal disclaimer text', 'woo-portal-theme' ),
+			'desc' => esc_html__( 'Set disclaimer text', 'woo-portal-theme' ),
+			'id'   => 'woo_portal_theme_legal_text',
+			'type' => 'text',
+		)
+	);
 }

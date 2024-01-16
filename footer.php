@@ -61,10 +61,10 @@ $site_title = get_bloginfo('name');
 	<div class="legal">
 		<div class="footer__nav container">
 			<span>
-				<?php
-				// translators: disclaimer.
-				printf( esc_html__( 'This website is part of municipal %s, in support of the Wet Open Overheid.', 'woo-portal-theme' ), esc_html( get_bloginfo( 'name' ) ) );
-				?>
+			     <?php
+				 $disclaimer = cmb2_get_option( 'woo_portal_theme_options', 'woo_portal_theme_legal_text' );
+				 echo ( esc_html( $disclaimer) );
+				 ?>
 			</span>
 		</div>
 	</div>
