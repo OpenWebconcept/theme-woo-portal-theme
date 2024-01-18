@@ -48,12 +48,12 @@ $site_title = get_bloginfo('name');
             if ( ! empty( $text3 ) ) {
                 echo wp_kses_post( $text3 );
             } ?>
-			    <a class="footer__btn" href="<?php echo esc_url( $btn_url ) ?>" target="_blank">
-                <?php
-                echo esc_html( $btn_text );
-                Tools::svg( 'external-link' );
-                ?>
+                <?php if ( ! empty( $btn_url ) ) { ?>
+                <a class="footer__btn" href="<?php echo esc_url( $btn_url ) ?>" target="_blank">
+                <?php echo esc_html( $btn_text );
+                Tools::svg( 'external-link' ); ?>
                 </a>
+                <?php } ?>
             </div>
 		</div>
 	</div>
