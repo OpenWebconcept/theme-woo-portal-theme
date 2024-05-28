@@ -63,6 +63,26 @@ function woo_portal_theme_register_theme_options_metabox() {
 		return $options;
 	}
 
+    $cmb_options->add_field(
+        array(
+            'name'         => esc_html__( 'Header logo image', 'woo-portal-theme' ),
+            'desc'         => esc_html__( 'Logo', 'woo-portal-theme' ),
+            'id'           => 'woo_portal_theme_header_logo',
+            'type'         => 'file',
+            // query_args are passed to wp.media's library query.
+            'query_args'   => array(
+                // Only allow gif, jpg, or png images.
+                'type' => array(
+                    'image/gif',
+                    'image/jpg',
+                    'image/jpeg',
+                    'image/png',
+                ),
+            ),
+            'preview_size' => 'large', // Image size to use when previewing in the admin.
+        )
+    );
+
 	$cmb_options->add_field(
 		array(
 			'name'             => esc_html__( 'Contact page', 'woo-portal-theme' ),
