@@ -40,7 +40,7 @@ do_action( 'wp_body_open' );
 			if ( ! empty( $image ) ) {
 				echo wp_kses_post( $image );
 			} else { ?>
-                <div class="header__title"><?php echo esc_html( get_bloginfo( 'name' ) ); ?></div>;
+                <div class="header__title"><?php echo esc_html( get_bloginfo( 'name' ) ); ?></div>
 			<?php } ?>
 		</a>
 		<div class="header-right">
