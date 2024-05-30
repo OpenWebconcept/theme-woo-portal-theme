@@ -19,7 +19,7 @@ $site_title = get_bloginfo('name');
 <footer class="footer">
 	<div class="footer__nav container">
 		<div class="nav__item nav__logo">
-			<a class="logo" href="<?php echo esc_url( get_bloginfo( 'url' ) ); ?>" aria-label="Ga naar <?php echo $sitename ?>">
+			<a class="logo" href="<?php echo esc_url( get_bloginfo( 'url' ) ); ?>" aria-label="Ga naar <?php echo esc_attr( $site_title ) ?>">
 			<?php
 			$image = wp_get_attachment_image( cmb2_get_option( 'woo_portal_theme_options', 'woo_portal_theme_logo_id' ), 'medium' );
 			if ( ! empty( $image ) ) {
