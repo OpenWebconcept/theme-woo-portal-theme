@@ -1,6 +1,6 @@
 .header {
 	overflow: hidden;
-	padding: var(--padding) 0px;
+	//padding: var(--padding) 0px;
 	.container {
 		display: flex;
 		justify-content: space-between;
@@ -19,11 +19,15 @@
 	line-height: 25px;
 	border-radius: 4px;
 	&.logo {
+		align-items: center;
+		display: flex;
 		font-size: 22px;
 		font-weight: bold;
+		min-height: 80px;
 		img {
 			max-height: 85px;
 			object-fit: contain;
+			object-position: left;
 			@media screen and (max-width: 500px) {
 				max-height: 50px;
 			}

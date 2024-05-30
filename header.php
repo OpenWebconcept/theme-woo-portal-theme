@@ -23,6 +23,7 @@ $site_title = get_bloginfo('name');
 	<?php wp_head(); ?>
 </head>
 <body <?php body_class(); ?>>
+
 <?php
 do_action( 'wp_body_open' );
 ?>
@@ -36,7 +37,12 @@ do_action( 'wp_body_open' );
 <div class="header">
 	<div class="container">
 		<a class="logo" href="<?php echo esc_url( get_bloginfo( 'url' ) ); ?>" title="<?php echo esc_html( get_bloginfo( 'description' ) ); ?>">
-		<div class="header__title"><?php echo esc_html( get_bloginfo( 'name' ) ); ?></div>
+		<?php $image = wp_get_attachment_image( cmb2_get_option( 'woo_portal_theme_options', 'woo_portal_theme_header_logo_id' ), 'medium' );
+			if ( ! empty( $image ) ) {
+				echo wp_kses_post( $image );
+			} else { ?>
+                <div class="header__title"><?php echo esc_html( get_bloginfo( 'name' ) ); ?></div>
+			<?php } ?>
 		</a>
 		<div class="header-right">
 			<?php
