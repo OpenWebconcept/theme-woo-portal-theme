@@ -59,18 +59,18 @@ class SubmissionHandler {
 		$mapping = [];
 
 		foreach ( $this->form['fields'] as $field ) {
-			if ( empty( $field['id'] ) || empty( $field['adminLabel'] ) ) {
+			if ( empty( $field['id'] ) ) {
 				continue;
 			}
 
 			if ( empty( $field['inputs'] ) ) {
-				$mapping[ $field['id'] ] = $field['adminLabel'];
+				$mapping[ $field['id'] ] = $field['adminLabel'] ?: $field['label'];
 
 				continue;
 			}
 
 			foreach ( $field['inputs'] as $input ) {
-				$mapping[ $input['id'] ] = $input['customlabel'] ?? $input['label'];
+				$mapping[ $input['id'] ] = ( $input['customlabel'] ?? $field['adminLabel'] ) ?: $input['label'];
 			}
 		}
 
