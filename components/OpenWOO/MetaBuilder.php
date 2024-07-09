@@ -7,7 +7,20 @@ use Yard\OpenWOO\Traits\GravityFormsUploadToMediaLibrary;
 class MetaBuilder
 {
     use GravityFormsUploadToMediaLibrary;
-    
+
+	/**
+	 * Overrule the trait version of this function to use wp_remote_get instead of curl.
+	 *
+	 * @param string $url The URL to fetch.
+	 *
+	 * @return string File content.
+	 */
+	protected function getFileFromGravityForms(string $url): string
+	{
+		$result = wp_remote_get( $url );
+		return $result && ! is_wp_error( $result ) ? wp_remote_retrieve_body( $result ) : '';
+	}
+
     private array $formValues = [];
 
     public function __construct(array $formValues)
